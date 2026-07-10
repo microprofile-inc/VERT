@@ -437,6 +437,7 @@ export const dropdownStates = writable<Record<string, string>>({});
 export const isMobile = writable(false);
 export const effects = writable(true);
 export const theme = writable<"light" | "dark">("light");
+export const locale = writable(getLocale());
 export const availableLocales = {
 	en: "English",
 	es: "Español",
@@ -484,9 +485,6 @@ export function detectBrowserLocale(): string | undefined {
 
 	return undefined;
 }
-
-const storedLocale = typeof localStorage !== "undefined" ? localStorage.getItem("locale") : null;
-export const locale = writable(storedLocale || detectBrowserLocale() || getLocale());
 
 export function updateLocale(newLocale: string) {
 	if (!Object.keys(availableLocales).includes(newLocale)) newLocale = "en";

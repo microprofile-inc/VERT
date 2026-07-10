@@ -20,6 +20,29 @@
 		%sveltekit.head%
 		<script>
 			(function () {
+				if (!localStorage.getItem("locale")) {
+					var available = ["en","es","fr","de","it","ba","hr","id","tr","ja","ko","el","zh-Hans","zh-Hant","pt-BR"];
+					var map = {"zh-cn":"zh-Hans","zh-sg":"zh-Hans","zh-tw":"zh-Hant","zh-hk":"zh-Hant","zh-mo":"zh-Hant","pt":"pt-BR","pt-pt":"pt-BR","zh":"zh-Hans"};
+					var loc = null;
+					var nav = navigator.languages || [navigator.language];
+					for (var i = 0; i < nav.length && !loc; i++) {
+						var l = nav[i].toLowerCase();
+						if (map[l]) { loc = map[l]; break; }
+						var exact = available.find(function(x) { return x.toLowerCase() === l; });
+						if (exact) { loc = exact; break; }
+						var b = l.split("-")[0];
+						var base = available.find(function(x) { return x.toLowerCase() === b; });
+						if (base) { loc = base; break; }
+					}
+					if (loc) {
+						localStorage.setItem("locale", loc);
+						localStorage.setItem("PARAGLIDE_LOCALE", loc);
+					}
+				}
+			})();
+		</script>
+		<script>
+			(function () {
 				// Apply theme before DOM is loaded
 				let theme = localStorage.getItem("theme");
 				const prefersDark = window.matchMedia(
