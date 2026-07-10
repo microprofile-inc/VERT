@@ -5,10 +5,11 @@
 		"convert": "Convertir",
 		"settings": "Ajustes",
 		"about": "Acerca de",
-		"toggle_theme": "Cambiar tema"
+		"toggle_theme": "Cambiar tema",
+		"toggle_language": "Cambiar idioma"
 	},
 	"footer": {
-		"copyright": "© {year} VERT.",
+		"copyright": "© {year} FormatCube.",
 		"source_code": "Código fuente",
 		"discord_server": "Servidor de Discord"
 	},
@@ -20,7 +21,7 @@
 			"convert": "convertir"
 		},
 		"cards": {
-			"title": "VERT soporta...",
+			"title": "FormatCube soporta...",
 			"images": "Imágenes",
 			"audio": "Audio",
 			"documents": "Documentos",
@@ -109,7 +110,7 @@
 			"advanced_settings": "Configuraciones avanzadas",
 			"filename_format": "Formato del nombre de archivo",
 			"filename_description": "Esto va a determinar el nombre del archivo al ser descargado <b>sin incluir la extensión</b>. Puedes poner las siguientes plantillas en el formato, las cuales serán reemplazadas con la información que les corresponde: <b>%name%</b> para el nombre original, <b>%extension%</b> para la extensión original del archivo y <b>%date%</b> para la fecha de cuando el archivo fue convertido.",
-			"placeholder": "VERT_%name%",
+			"placeholder": "FormatCube_%name%",
 			"default_format": "Formato de conversión predeterminado",
 			"default_format_description": "Esto cambiará el formato predeterminado seleccionado cuando subes un archivo de este tipo.",
 			"default_format_image": "Imágenes",
@@ -133,7 +134,7 @@
 			"loading": "cargando...",
 			"available": "disponible, id del commit {commitId}",
 			"unavailable": "no disponible (¿has comprobado la url?)",
-			"description": "<code>vertd</code> es un proyecto que actúa como un servidor intermediario (\"wrapper\") para FFmpeg. Permite convertir vídeos sin dejar de lado la conveniente interfaz web de VERT y, a la vez, aprovecha la potencia de tu GPU para hacerlo lo más rápido posible.",
+			"description": "<code>vertd</code> es un proyecto que actúa como un servidor intermediario (\"wrapper\") para FFmpeg. Permite convertir vídeos sin dejar de lado la conveniente interfaz web de FormatCube y, a la vez, aprovecha la potencia de tu GPU para hacerlo lo más rápido posible.",
 			"hosting_info": "Alojamos una instancia pública para tu conveniencia, pero es bastante fácil alojar una propia en tu PC o servidor si sabes lo que estás haciendo. Puedes descargar los binarios del servidor [vertd_link]aquí[/vertd_link]. ¡El proceso de instalación será más fácil en el futuro, así que mantente atento!",
 			"instance": "Instancia",
 			"url_placeholder": "Ejemplo: http://localhost:24153",
@@ -170,13 +171,13 @@
 		},
 		"language": {
 			"title": "Lenguaje",
-			"description": "Selecciona el lenguaje que prefieres usar para la interfaz de VERT."
+			"description": "Selecciona el lenguaje que prefieres usar para la interfaz de FormatCube."
 		}
 	},
 	"about": {
 		"title": "Acerca de",
 		"why": {
-			"title": "¿Por qué VERT?",
+			"title": "¿Por qué FormatCube?",
 			"description": "<b>Los conversores de archivos siempre nos han decepcionado.</b> Son feos, están llenos de anuncios y, lo más importante, son lentos. Decidimos solucionar este problema de una vez por todas creando una alternativa que resuelve todo eso, y más.<br/><br/>Todos los archivos (exceptuando vídeos) se convierten directamente en tu dispositivo; esto significa que no hay demoras por subir o bajar archivos de un servidor, y nunca tenemos acceso a los archivos que conviertes.<br/><br/>Los vídeos se suben a nuestro servidor ultra rápido equipado con una RTX 4000 Ada. Tus vídeos permanecen allí durante una hora si no los conviertes. Si los conviertes, el archivo se guarda durante una hora, o hasta que lo descargues. Luego, el archivo se elimina del servidor."
 		},
 		"sponsors": {
@@ -191,8 +192,8 @@
 			"email": "Email"
 		},
 		"donate": {
-			"title": "Donar a VERT",
-			"description": "Con tu apoyo, podemos seguir manteniendo y mejorando VERT.",
+			"title": "Donar a FormatCube",
+			"description": "Con tu apoyo, podemos seguir manteniendo y mejorando FormatCube.",
 			"one_time": "Una sola vez",
 			"monthly": "Mensual",
 			"custom": "Personalizado",
@@ -207,12 +208,12 @@
 			"title": "Créditos",
 			"contact_team": "Si te gustaría contactar al equipo de desarrollo, por favor usa el email que se encuentra en la tarjeta de \"Recursos\".",
 			"notable_contributors": "Colaboradores destacados",
-			"notable_description": "Queremos dar las gracias a las siguientes personas por sus importantes contribuciones a VERT.",
+			"notable_description": "Queremos dar las gracias a las siguientes personas por sus importantes contribuciones a FormatCube.",
 			"github_contributors": "Contribuidores de GitHub",
 			"github_description": "¡Muchas gracias a todos los que han contribuido! [github_link]¿Quieres contribuir también?[/github_link]",
 			"no_contributors": "Parece que nadie ha contribuido todavía... [contribute_link]¡Sé el primero en hacerlo![/contribute_link]",
 			"libraries": "Librerías",
-			"libraries_description": "Muchas gracias a FFmpeg (audio, vídeo), ImageMagick (imágenes) y Pandoc (documentos) por mantener librerías excelentes por tantos años. VERT depende de ellas para proporcionar tus conversiones.",
+			"libraries_description": "Muchas gracias a FFmpeg (audio, vídeo), ImageMagick (imágenes) y Pandoc (documentos) por mantener librerías excelentes por tantos años. FormatCube depende de ellas para proporcionar tus conversiones.",
 			"roles": {
 				"lead_developer": "Líder de desarrollo; implementación del backend de conversión e interfaz",
 				"developer": "Desarrollador; implementación de la interfaz",
@@ -228,7 +229,7 @@
 	"workers": {
 		"errors": {
 			"general": "Ocurrió un error mientras se convertía {file}: {message}",
-            "cancel": "Error al cancelar la conversión para {file}: {message}",
+			"cancel": "Error al cancelar la conversión para {file}: {message}",
 			"magick": "Ocurrió un error en el módulo de Magick, la conversión de imágenes puede que no funcione correctamente.",
 			"ffmpeg": "No se pudo cargar FFmpeg, algunas funciones podrían no funcionar.",
 			"no_audio": "No se encontró una pista de audio.",

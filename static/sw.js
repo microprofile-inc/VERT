@@ -1,4 +1,4 @@
-const CACHE_NAME = "vert-wasm-cache-v2"; // updated when workers update
+const CACHE_NAME = "formatcube-cache-v2"; // updated when workers update
 
 const WASM_FILES = [
 	"/pandoc.wasm",
@@ -53,7 +53,7 @@ self.addEventListener("activate", (event) => {
 					cacheNames.map((cacheName) => {
 						if (
 							cacheName !== CACHE_NAME &&
-							cacheName.startsWith("vert-wasm-cache")
+							cacheName.startsWith("formatcube-cache")
 						) {
 							console.log("[SW] deleting old cache:", cacheName);
 							return caches.delete(cacheName);

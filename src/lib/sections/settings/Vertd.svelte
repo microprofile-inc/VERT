@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Panel from "$lib/components/visual/Panel.svelte";
-	import { GITHUB_URL_VERTD } from "$lib/util/consts";
 	import { ServerIcon } from "lucide-svelte";
 	import type { ISettings } from "./index.svelte";
 	import clsx from "clsx";
@@ -76,11 +75,7 @@
 					{@html sanitize(m["settings.vertd.description"]())}
 				</p>
 				<p class="text-sm text-muted font-normal">
-					{@html sanitize(link(
-						"vertd_link",
-						m["settings.vertd.hosting_info"](),
-						GITHUB_URL_VERTD,
-					))}
+					{@html sanitize(m["settings.vertd.hosting_info"]())}
 				</p>
 				<div class="flex flex-col gap-2">
 					<p class="text-base font-bold">

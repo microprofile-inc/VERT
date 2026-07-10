@@ -146,7 +146,7 @@
 								m["settings.privacy.plausible_description"](),
 								[
 									"https://plausible.io/privacy-focused-web-analytics",
-									"https://ats.vert.sh/vert.sh",
+									"https://formatcube.com",
 								],
 							)}
 						</p>

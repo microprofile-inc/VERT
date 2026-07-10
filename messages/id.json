@@ -5,10 +5,11 @@
 		"convert": "Konversi",
 		"settings": "Pengaturan",
 		"about": "Tentang",
-		"toggle_theme": "Ganti Tema"
+		"toggle_theme": "Ganti Tema",
+		"toggle_language": "Ganti bahasa"
 	},
 	"footer": {
-		"copyright": "© {year} VERT.",
+		"copyright": "© {year} FormatCube.",
 		"source_code": "Kode sumber",
 		"discord_server": "Peladen Discord"
 	},
@@ -21,7 +22,7 @@
 			"jpegify": "jpegify"
 		},
 		"cards": {
-			"title": "Dapat Ditangani VERT ...",
+			"title": "Dapat Ditangani FormatCube ...",
 			"images": "Gambar",
 			"audio": "Audio",
 			"documents": "Dokumen",
@@ -115,7 +116,7 @@
 			"advanced_settings": "Pengaturan lanjutan",
 			"filename_format": "Format nama berkas",
 			"filename_description": "Ini akan menentukan nama berkas saat diunduh, <b>tidak termasuk ekstensi berkas.</b> Kamu dapat menggunakan template berikut dalam format, yang akan diganti dengan informasi terkait: <b>%name%</b> untuk nama berkas asli, <b>%extension%</b> untuk ekstensi berkas asli, dan <b>%date%</b> untuk tanggal saat berkas dikonversi.",
-			"placeholder": "VERT_%name%",
+			"placeholder": "FormatCube_%name%",
 			"default_format": "Format konversi baku",
 			"default_format_description": "Ini akan mengubah format baku yang dipilih saat kamu mengunggah berkas dengan tipe tersebut.",
 			"default_format_image": "Gambar",
@@ -139,7 +140,7 @@
 			"loading": "memuat...",
 			"available": "tersedia, commit id {commitId}",
 			"unavailable": "tidak tersedia (apakah URL sudah benar?)",
-			"description": "Proyek <code>vertd</code> adalah server wrapper untuk FFmpeg. Ini memungkinkan kamu mengonversi video melalui antarmuka web VERT, sambil memanfaatkan kekuatan GPU untuk mempercepat proses.",
+			"description": "Proyek <code>vertd</code> adalah server wrapper untuk FFmpeg. Ini memungkinkan kamu mengonversi video melalui antarmuka web FormatCube, sambil memanfaatkan kekuatan GPU untuk mempercepat proses.",
 			"hosting_info": "Kami menyediakan instance publik untuk kemudahanmu, tetapi kamu juga bisa dengan mudah meng-host sendiri di PC atau server jika tahu caranya. Kamu dapat mengunduh binary server [vertd_link]di sini[/vertd_link] - proses penyiapan akan semakin mudah di masa depan, jadi tetap pantau!",
 			"instance": "Instance",
 			"url_placeholder": "Contoh: http://localhost:24153",
@@ -177,13 +178,13 @@
 		},
 		"language": {
 			"title": "Bahasa",
-			"description": "Pilih bahasa pilihanmu untuk antarmuka VERT."
+			"description": "Pilih bahasa pilihanmu untuk antarmuka FormatCube."
 		}
 	},
 	"about": {
 		"title": "Tentang",
 		"why": {
-			"title": "Mengapa VERT?",
+			"title": "Mengapa FormatCube?",
 			"description": "<b>Konverter berkas selalu mengecewakan kami.</b> Mereka jelek, penuh iklan, dan yang paling penting; lambat. Kami memutuskan untuk menyelesaikan masalah ini sekali untuk selamanya dengan membuat alternatif yang memperbaiki semua masalah itu, dan lebih banyak lagi.<br/><br/>Semua berkas non-video dikonversi sepenuhnya di perangkat; artinya tidak ada jeda antara pengiriman dan penerimaan berkas, dan kami tidak pernah melihat berkas yang kamu konversi.<br/><br/>File video diunggah ke server RTX 4000 Ada super cepat kami. Videomu akan tetap di sana selama satu jam jika tidak dikonversi. Jika dikonversi, video akan bertahan satu jam atau hingga diunduh. Setelah itu, berkas akan dihapus dari server kami."
 		},
 		"sponsors": {
@@ -198,8 +199,8 @@
 			"email": "Email"
 		},
 		"donate": {
-			"title": "Donasi untuk VERT",
-			"description": "Dengan dukunganmu, kami dapat terus memelihara dan meningkatkan VERT.",
+			"title": "Donasi untuk FormatCube",
+			"description": "Dengan dukunganmu, kami dapat terus memelihara dan meningkatkan FormatCube.",
 			"one_time": "Sekali",
 			"monthly": "Bulanan",
 			"custom": "Kustom",
@@ -214,12 +215,12 @@
 			"title": "Kredit",
 			"contact_team": "Jika kamu ingin menghubungi tim pengembang, gunakan email yang ada di kartu \"Sumber Daya\".",
 			"notable_contributors": "Kontributor penting",
-			"notable_description": "Kami ingin berterima kasih kepada orang-orang ini atas kontribusi besar mereka untuk VERT.",
+			"notable_description": "Kami ingin berterima kasih kepada orang-orang ini atas kontribusi besar mereka untuk FormatCube.",
 			"github_contributors": "Kontributor GitHub",
 			"github_description": "[jpegify_link]Terima kasih[/jpegify_link] banyak kepada semua orang yang telah membantu! [github_link]Ingin membantu juga?[/github_link]",
 			"no_contributors": "Sepertinya belum ada yang berkontribusi... [contribute_link]jadilah yang pertama berkontribusi![/contribute_link]",
 			"libraries": "Pustaka",
-			"libraries_description": "Terima kasih besar kepada FFmpeg (audio, video), ImageMagick (gambar), dan Pandoc (dokumen) atas pemeliharaannya selama bertahun-tahun. VERT bergantung pada mereka untuk menyediakan konversi berkas.",
+			"libraries_description": "Terima kasih besar kepada FFmpeg (audio, video), ImageMagick (gambar), dan Pandoc (dokumen) atas pemeliharaannya selama bertahun-tahun. FormatCube bergantung pada mereka untuk menyediakan konversi berkas.",
 			"roles": {
 				"lead_developer": "Pengembang utama; backend konversi, implementasi UI",
 				"developer": "Pengembang; implementasi UI",

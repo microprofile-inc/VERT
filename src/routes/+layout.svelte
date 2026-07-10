@@ -17,6 +17,7 @@
 		vertdLoaded,
 		locale,
 		updateLocale,
+		detectBrowserLocale,
 	} from "$lib/store/index.svelte";
 	import "$lib/css/app.scss";
 	import { browser } from "$app/environment";
@@ -86,7 +87,12 @@
 			(localStorage.getItem("theme") as "light" | "dark") || "light",
 		);
 		const storedLocale = localStorage.getItem("locale");
-		if (storedLocale) updateLocale(storedLocale);
+		if (storedLocale) {
+			updateLocale(storedLocale);
+		} else {
+			const browserLocale = detectBrowserLocale();
+			if (browserLocale) updateLocale(browserLocale);
+		}
 
 		Settings.instance.load();
 
@@ -136,9 +142,9 @@
 	/>
 	<meta
 		name="description"
-		content="With VERT, you can quickly convert any image, video, audio, and document file. No ads, no tracking, open source, and all processing (other than video) is done on your device."
+		content="With FormatCube, you can quickly convert any image, video, audio, and document file. No ads, no tracking, open source, and all processing (other than video) is done on your device."
 	/>
-	<meta property="og:url" content="https://vert.sh" />
+	<meta property="og:url" content="https://formatcube.com" />
 	<meta property="og:type" content="website" />
 	<meta
 		property="og:title"
@@ -146,27 +152,27 @@
 	/>
 	<meta
 		property="og:description"
-		content="With VERT, you can quickly convert any image, video, audio, and document file. No ads, no tracking, open source, and all processing (other than video) is done on your device."
+		content="With FormatCube, you can quickly convert any image, video, audio, and document file. No ads, no tracking, open source, and all processing (other than video) is done on your device."
 	/>
 	<meta property="og:image" content={featuredImage} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta property="twitter:domain" content="vert.sh" />
-	<meta property="twitter:url" content="https://vert.sh" />
+	<meta property="twitter:domain" content="formatcube.com" />
+	<meta property="twitter:url" content="https://formatcube.com" />
 	<meta
 		property="twitter:title"
 		content="{VERT_NAME} — Free, fast, and awesome file converter"
 	/>
 	<meta
 		property="twitter:description"
-		content="With VERT, you can quickly convert any image, video, audio, and document file. No ads, no tracking, open source, and all processing (other than video) is done on your device."
+		content="With FormatCube, you can quickly convert any image, video, audio, and document file. No ads, no tracking, open source, and all processing (other than video) is done on your device."
 	/>
 	<meta property="twitter:image" content={featuredImage} />
 	<link rel="manifest" href="/manifest.json" />
-	<link rel="canonical" href="https://vert.sh/" />
+	<link rel="canonical" href="https://formatcube.com/" />
 	{#if enablePlausible}
 		<script
 			defer
-			data-domain={PUB_HOSTNAME || "vert.sh"}
+			data-domain={PUB_HOSTNAME || "formatcube.com"}
 			src="{PUB_PLAUSIBLE_URL}/js/script.js"
 		></script>
 	{/if}

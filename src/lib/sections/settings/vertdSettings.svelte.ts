@@ -2,18 +2,7 @@ import { ip, type IpInfo } from "$lib/util/ip";
 import { Settings } from "./index.svelte";
 import { PUB_VERTD_URL } from "$env/static/public";
 
-const LOCATIONS = [
-	{
-		latitude: 49.0976,
-		longitude: 12.4869,
-		url: "https://eu.vertd.vert.sh",
-	},
-	{
-		latitude: 47.6587,
-		longitude: -117.426,
-		url: "https://usa.vertd.vert.sh",
-	},
-];
+const LOCATIONS: { latitude: number; longitude: number; url: string }[] = [];
 
 const toRad = (value: number) => (value * Math.PI) / 180;
 const haversine = (lat1: number, lon1: number, lat2: number, lon2: number) => {
@@ -56,7 +45,7 @@ export class VertdInstance {
 		// if custom vertd url and no saved setting, default to the custom url
 		if (!ls) {
 			const isCustomUrl =
-				PUB_VERTD_URL && PUB_VERTD_URL !== "https://vertd.vert.sh";
+				PUB_VERTD_URL && PUB_VERTD_URL !== "";
 			if (isCustomUrl) {
 				this.inner = { type: "custom" };
 				return;
@@ -112,12 +101,9 @@ export class VertdInstance {
 				return Settings.instance.settings.vertdURL;
 			}
 
-			case "eu": {
-				return "https://eu.vertd.vert.sh";
-			}
-
-			case "us": {
-				return "https://usa.vertd.vert.sh";
+			case "eu":
+		case "us": {
+				return Settings.instance.settings.vertdURL;
 			}
 
 			case "custom": {

@@ -467,6 +467,36 @@ export function updateLocale(newLocale: string) {
 	locale.set(newLocale);
 }
 
+const browserLocaleMap: Record<string, string> = {
+	"zh": "zh-Hans",
+	"zh-cn": "zh-Hans",
+	"zh-sg": "zh-Hans",
+	"zh-tw": "zh-Hant",
+	"zh-hk": "zh-Hant",
+	"zh-mo": "zh-Hant",
+	"pt": "pt-BR",
+	"pt-pt": "pt-BR",
+};
+
+export function detectBrowserLocale(): string | undefined {
+	if (typeof navigator === "undefined" || !navigator.languages?.length)
+		return undefined;
+
+	const available = Object.keys(availableLocales);
+	const availableLower = new Map(available.map((l) => [l.toLowerCase(), l]));
+
+	for (const browserLang of navigator.languages) {
+		const lower = browserLang.toLowerCase();
+		const base = lower.split("-")[0];
+
+		if (browserLocaleMap[lower]) return browserLocaleMap[lower];
+		if (availableLower.has(lower)) return availableLower.get(lower);
+		if (availableLower.has(base)) return availableLower.get(base);
+	}
+
+	return undefined;
+}
+
 export function link(
 	tag: string | string[],
 	text: string,

@@ -3,10 +3,9 @@
 	import { HeartHandshakeIcon } from "lucide-svelte";
 	import {
 		DISABLE_ALL_EXTERNAL_REQUESTS,
-		GITHUB_URL_VERT,
 	} from "$lib/util/consts";
 	import { m } from "$lib/paraglide/messages";
-	import { link, sanitize } from "$lib/store/index.svelte";
+	import { sanitize } from "$lib/store/index.svelte";
 
 	let { mainContribs, notableContribs, ghContribs } = $props();
 </script>
@@ -102,23 +101,13 @@
 					{#if ghContribs && ghContribs.length > 0}
 						<p class="text-base text-muted font-normal">
 							{@html sanitize(
-								link(
-									"github_link",
-									m["about.credits.github_description"](),
-									GITHUB_URL_VERT,
-									true,
-								),
+								m["about.credits.github_description"](),
 							)}
 						</p>
 					{:else}
 						<p class="text-base text-muted font-normal italic">
 							{@html sanitize(
-								link(
-									"contribute_link",
-									m["about.credits.no_contributors"](),
-									GITHUB_URL_VERT,
-									true,
-								),
+								m["about.credits.no_contributors"](),
 							)}
 						</p>
 					{/if}

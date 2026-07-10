@@ -7,10 +7,15 @@
 		files,
 		goingLeft,
 		setTheme,
+		locale,
+		updateLocale,
+		availableLocales,
 	} from "$lib/store/index.svelte";
 	import clsx from "clsx";
 	import {
+		Check,
 		InfoIcon,
+		Languages,
 		MoonIcon,
 		RefreshCw,
 		SettingsIcon,
@@ -66,6 +71,26 @@
 	let container = $state<HTMLDivElement>();
 	let containerRect = $derived(container?.getBoundingClientRect());
 	let isInitialized = $state(false);
+
+	let langOpen = $state(false);
+	let langContainer = $state<HTMLDivElement>();
+	const localeEntries = Object.entries(availableLocales);
+
+	function selectLanguage(code: string) {
+		updateLocale(code);
+		langOpen = false;
+	}
+
+	$effect(() => {
+		if (!langOpen) return;
+		const click = (e: MouseEvent) => {
+			if (langContainer && !langContainer.contains(e.target as Node)) {
+				langOpen = false;
+			}
+		};
+		window.addEventListener("click", click);
+		return () => window.removeEventListener("click", click);
+	});
 
 	const linkRects = $derived(links.map((l) => l.getBoundingClientRect()));
 
@@ -208,5 +233,36 @@
 				<MoonIcon class="dynadark:block hidden" />
 			</button>
 		</Tooltip>
+		<div bind:this={langContainer} class="relative hidden md:flex">
+			<Tooltip text={m["navbar.toggle_language"]()} position="right">
+				<button
+					onclick={() => (langOpen = !langOpen)}
+					class="w-14 h-full items-center justify-center flex"
+				>
+					<Languages />
+				</button>
+			</Tooltip>
+			{#if langOpen}
+				<div
+					transition:fade={{
+						duration,
+						easing: quintOut,
+					}}
+					class="absolute top-full right-0 mt-1 z-50 bg-panel-alt shadow-xl shadow-black/25 rounded-xl max-h-[40vh] overflow-y-auto min-w-[180px] py-1"
+				>
+					{#each localeEntries as [code, name] (code)}
+						<button
+							onclick={() => selectLanguage(code)}
+							class="w-full px-4 py-2 text-left hover:bg-panel flex items-center justify-between gap-3"
+						>
+							<span>{name}</span>
+							{#if $locale === code}
+								<Check size="16" class="text-accent-purple flex-shrink-0" />
+							{/if}
+						</button>
+					{/each}
+				</div>
+			{/if}
+		</div>
 	</Panel>
 </div>

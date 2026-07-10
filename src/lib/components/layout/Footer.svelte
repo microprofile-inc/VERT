@@ -1,11 +1,6 @@
 <script lang="ts">
-	import { GITHUB_URL_VERT, DISCORD_URL } from "$lib/util/consts";
+	import { DISCORD_URL } from "$lib/util/consts";
 	import { m } from "$lib/paraglide/messages";
-
-	const commitHash =
-		__COMMIT_HASH__ && __COMMIT_HASH__ !== "unknown"
-			? __COMMIT_HASH__
-			: null;
 
 	const year = new Date().getFullYear();
 
@@ -23,14 +18,6 @@
 		<p>•</p>
 		<a
 			class="hover:underline font-normal"
-			href={GITHUB_URL_VERT}
-			target="_blank"
-		>
-			{m["footer.source_code"]()}
-		</a>
-		<p>•</p>
-		<a
-			class="hover:underline font-normal"
 			href={DISCORD_URL}
 			target="_blank"
 		>
@@ -43,16 +30,6 @@
 		>
 			{m["footer.privacy_policy"]()}
 		</a>
-		{#if commitHash}
-			<p>•</p>
-			<a
-				class="hover:underline font-normal"
-				href="{GITHUB_URL_VERT}/commit/{commitHash}"
-				target="_blank"
-			>
-				{commitHash}
-			</a>
-		{/if}
 	</div>
 
 	<div

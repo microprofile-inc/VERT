@@ -13,7 +13,7 @@
 
 	function copyToClipboard() {
 		try {
-			navigator.clipboard.writeText("hello@vert.sh");
+			navigator.clipboard.writeText("838394225@qq.com");
 			copied = true;
 			ToastManager.add({
 				type: "success",
@@ -72,7 +72,7 @@
 					{:else}
 						<CopyIcon size="14"></CopyIcon>
 					{/if}
-					hello@vert.sh
+					838394225@qq.com
 				</button>
 			</span>!
 		</p>

@@ -4,7 +4,7 @@
 	import { converters } from "$lib/converters";
 	import { vertdLoaded } from "$lib/store/index.svelte";
 	import clsx from "clsx";
-	import { AudioLines, BookText, Check, Film, Image } from "lucide-svelte";
+	import { AudioLines, BookText, Check, Image } from "lucide-svelte";
 	import { m } from "$lib/paraglide/messages";
 	import { OverlayScrollbarsComponent } from "overlayscrollbars-svelte";
 	import { browser } from "$app/environment";
@@ -65,14 +65,17 @@
 			},
 		};
 
-		if (!DISABLE_ALL_EXTERNAL_REQUESTS) {
-			output.Video = {
-				formats: getSupportedFormats("vertd"),
-				icon: Film,
-				title: m["upload.cards.video"](),
-				status: $vertdLoaded === true ? "ready" : "not-ready", // not using converter.status for this
-			};
-		}
+		// Video 模块暂时隐藏：视频转换依赖远程 vertd 守护进程，
+		// 当前部署（如纯静态 OSS 托管）未提供该后端服务，故先隐藏此卡片。
+		// 如需恢复，取消下方注释即可。
+		// if (!DISABLE_ALL_EXTERNAL_REQUESTS) {
+		// 	output.Video = {
+		// 		formats: getSupportedFormats("vertd"),
+		// 		icon: Film,
+		// 		title: m["upload.cards.video"](),
+		// 		status: $vertdLoaded === true ? "ready" : "not-ready",
+		// 	};
+		// }
 
 		return output;
 	});
@@ -204,15 +207,9 @@
 												]()}
 											>
 												<span>
-													<a
-														href="https://github.com/VERT-sh/VERT/blob/main/docs/VIDEO_CONVERSION.md"
-														target="_blank"
-														rel="noopener noreferrer"
-													>
-														{m[
+													{m[
 															"upload.cards.video_server_processing"
 														]()}
-													</a>
 													<span
 														class="text-red-500 -ml-0.5"
 														>*</span
