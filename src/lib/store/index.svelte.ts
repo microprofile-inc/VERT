@@ -437,7 +437,6 @@ export const dropdownStates = writable<Record<string, string>>({});
 export const isMobile = writable(false);
 export const effects = writable(true);
 export const theme = writable<"light" | "dark">("light");
-export const locale = writable(getLocale());
 export const availableLocales = {
 	en: "English",
 	es: "Español",
@@ -455,17 +454,6 @@ export const availableLocales = {
 	"zh-Hant": "繁體中文",
 	"pt-BR": "Português (Brasil)",
 };
-
-export function updateLocale(newLocale: string) {
-	if (!Object.keys(availableLocales).includes(newLocale)) newLocale = "en";
-
-	log(["locale"], `set to ${newLocale}`);
-	localStorage.setItem("locale", newLocale);
-	// @ts-expect-error shush
-	setLocale(newLocale, { reload: false });
-	// @ts-expect-error shush
-	locale.set(newLocale);
-}
 
 const browserLocaleMap: Record<string, string> = {
 	"zh": "zh-Hans",
@@ -495,6 +483,20 @@ export function detectBrowserLocale(): string | undefined {
 	}
 
 	return undefined;
+}
+
+const storedLocale = typeof localStorage !== "undefined" ? localStorage.getItem("locale") : null;
+export const locale = writable(storedLocale || detectBrowserLocale() || getLocale());
+
+export function updateLocale(newLocale: string) {
+	if (!Object.keys(availableLocales).includes(newLocale)) newLocale = "en";
+
+	log(["locale"], `set to ${newLocale}`);
+	localStorage.setItem("locale", newLocale);
+	// @ts-expect-error shush
+	setLocale(newLocale, { reload: false });
+	// @ts-expect-error shush
+	locale.set(newLocale);
 }
 
 export function link(
