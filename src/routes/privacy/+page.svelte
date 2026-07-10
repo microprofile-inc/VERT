@@ -31,44 +31,14 @@
 				{@html sanitize(m["privacy.conversions.description"]())}
 			</p>
 
-			<h2 class="text-2xl mb-3">{m["privacy.donations.title"]()}</h2>
-			<p class="mb-4">
-				{@html sanitize(
-					link(
-						["about_link", "stripe_link"],
-						m["privacy.donations.description"](),
-						["/about", "https://stripe.com/docs/disputes/prevention/advanced-fraud-detection"],
-						[false, true],
-					),
-				)}
-			</p>
-
-			<h2 class="text-2xl mb-3">
-				{m["privacy.conversion_errors.title"]()}
-			</h2>
-			<div class="mb-4">
-				{m["privacy.conversion_errors.description"]()}
-				<ul class="list-disc list-inside mt-2 mb-2">
-					<li>{m["privacy.conversion_errors.list_job_id"]()}</li>
-					<li>{m["privacy.conversion_errors.list_format_from"]()}</li>
-					<li>{m["privacy.conversion_errors.list_format_to"]()}</li>
-					<li>{m["privacy.conversion_errors.list_stderr"]()}</li>
-					<li>{m["privacy.conversion_errors.list_video"]()}</li>
-				</ul>
-				{m["privacy.conversion_errors.footer"]()}
-			</div>
-
 			<h3 class="text-xl mt-4 mb-2">{m["privacy.analytics.title"]()}</h3>
 			<p class="mb-4">
 				{@html sanitize(
 					link(
-						["settings_link", "plausible_link"],
+						["settings_link"],
 						m["privacy.analytics.description"](),
-						[
-							"/settings",
-							"https://plausible.io/privacy-focused-web-analytics",
-						],
-						[false, true],
+						["/settings"],
+						[false],
 					),
 				)}
 			</p>

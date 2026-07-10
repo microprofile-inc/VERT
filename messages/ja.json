@@ -235,5 +235,24 @@
 			"no_audio": "音声ストリームが見つかりません。",
 			"invalid_rate": "無効なサンプリングレートが指定されました: {rate}Hz"
 		}
+	},
+	"privacy": {
+		"summary": {
+			"title": "Summary",
+			"description": "FormatCube's privacy policy is very simple: all file conversions happen locally on your browser using WebAssembly, meaning your files never leave your device. The website is hosted on Alibaba Cloud OSS. We use Baidu Analytics for basic aggregated traffic statistics.<br/><br/>Note this may only apply to the official FormatCube instance at [vert_link]formatcube.com[/vert_link]; third-party instances may handle your data differently."
+		},
+		"conversions": {
+			"title": "Conversions",
+			"description": "All conversions (images, documents, audio) happen entirely locally on your device using WebAssembly versions of the relevant tools (e.g. ImageMagick, Pandoc, FFmpeg). This means your files never leave your device and we will never have access to them."
+		},
+		"analytics": {
+			"title": "Analytics",
+			"description": "We use Baidu Analytics for basic aggregated traffic statistics. You can opt out of analytics in the \"Privacy & data\" section in [settings_link]settings[/settings_link]."
+		},
+		"local_storage": {
+			"title": "Local Storage",
+			"description": "We use your browser's local storage to save your settings. No personal data is stored or transmitted.<br/><br/>The WebAssembly versions of the conversion tools we use (FFmpeg, ImageMagick, Pandoc) are also stored locally on your browser when you first visit the website, so you don't need to redownload them each visit. No personal data is stored or transmitted. You may view or delete this data at any time in the \"Privacy & data\" section in [settings_link]settings[/settings_link]."
+		},
+		"last_updated": "Last updated: 2026-07-10"
 	}
 }

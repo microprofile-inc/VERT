@@ -272,35 +272,25 @@
 	"privacy": {
 		"title": "隱私權政策",
 		"summary": {
-			"title": "摘要",
-			"description": "格式魔方 的隱私權政策非常簡單：我們根本不收集或儲存你的任何資料。我們不使用 cookie 或追蹤器，分析是完全私密的，所有轉換（影片除外）都在你的瀏覽器本機進行。影片在下載後或一小時後刪除，除非你明確授權儲存；它只會用於故障排除。格式魔方 自託管 Coolify 執行個體用於託管網站和 vertd（用於影片轉換），以及用於完全匿名和彙總分析的 Plausible 執行個體。<br/><br/>請注意，這可能僅適用於[vert_link]formatcube.com[/vert_link]的官方 格式魔方 執行個體；第三方執行個體可能以不同方式處理你的資料。"
+			"title": "概述",
+			"description": "格式魔方的隱私政策非常簡單：所有檔案轉換均透過 WebAssembly 在您的瀏覽器本地完成，檔案不會離開您的裝置。本網站託管於阿里雲 OSS（物件儲存）。我們使用百度統計收集基本的匯總流量統計資料。<br/><br/>注意，此政策僅適用於官方 FormatCube 實例 [vert_link]formatcube.com[/vert_link]；第三方實例可能以不同方式處理您的資料。"
 		},
 		"conversions": {
-			"title": "轉換",
-			"description": "大多數轉換（圖片、文件、音訊）完全在你的裝置上本機使用相關工具的 WebAssembly 版本（例如 ImageMagick、Pandoc、FFmpeg）進行。這意味著你的檔案永遠不會離開你的裝置，我們也永遠無法存取它們。<br/><br/>影片轉換在我們的伺服器上進行，因為它們需要更多的處理能力，並且目前無法在瀏覽器上非常快速地完成。你使用 格式魔方 轉換的影片在下載後或一小時後刪除，除非你明確授權我們將它們儲存更長時間，純粹用於故障排除。"
-		},
-		"conversion_errors": {
-			"title": "轉換錯誤",
-			"description": "當影片轉換失敗時，我們可能會收集一些匿名資料以協助我們診斷問題。這些資料可能包括：",
-			"list_job_id": "任務 ID，即匿名化的檔案名稱",
-			"list_format_from": "你轉換的來源格式",
-			"list_format_to": "你轉換的目標格式",
-			"list_stderr": "你任務的 FFmpeg stderr 輸出（錯誤訊息）",
-			"list_video": "實際影片檔案（如果明確授權）",
-			"footer": "此資訊僅用於診斷轉換問題。只有在你明確授權的情況下，才會收集實際影片檔案，並且僅用於故障排除。"
+			"title": "檔案轉換",
+			"description": "所有轉換（圖像、文件、音訊）均使用相應工具的 WebAssembly 版本（如 ImageMagick、Pandoc、FFmpeg）在您的裝置上完全本地完成。這意味著您的檔案永遠不會離開您的裝置，我們也無法存取它們。"
 		},
 		"analytics": {
-			"title": "分析",
-			"description": "我們自託管 Plausible 執行個體用於完全匿名和彙總的分析。Plausible 不使用 cookie，並符合所有主要隱私權法規（GDPR/CCPA/PECR）。你可以在[settings_link]設定[/settings_link]的「隱私權與資料」部分選擇退出分析，並在[plausible_link]這裡[/plausible_link]閱讀更多關於 Plausible 隱私權實務的資訊。"
+			"title": "分析統計",
+			"description": "我們使用百度統計收集基本的匯總流量統計資料。您可以在[settings_link]設定[/settings_link]的「隱私和資料」部分選擇退出分析統計。"
 		},
 		"local_storage": {
-			"title": "本機儲存",
-			"description": "我們使用瀏覽器的本機儲存來儲存你的設定，使用瀏覽器的工作階段儲存來暫時儲存「關於」部分的 GitHub 貢獻者清單，以減少重複的 GitHub API 請求。不會儲存或傳輸任何個人資料。<br/><br/>我們使用的轉換工具的 WebAssembly 版本（FFmpeg、ImageMagick、Pandoc）也會在你首次造訪網站時本機儲存在瀏覽器中，這樣你就不需要每次造訪時都重新下載它們。不會儲存或傳輸任何個人資料。你可以隨時在[settings_link]設定[/settings_link]的「隱私權與資料」部分檢視或刪除這些資料。"
+			"title": "本地儲存",
+			"description": "我們使用您瀏覽器的本地儲存來儲存設定。不儲存或傳輸任何個人資料。<br/><br/>我們使用的轉換工具的 WebAssembly 版本（FFmpeg、ImageMagick、Pandoc）也會在您首次訪問時儲存在瀏覽器本地，因此不需要每次重新下載。不儲存或傳輸任何個人資料。您可以隨時在[settings_link]設定[/settings_link]的「隱私和資料」部分查看或刪除這些資料。"
 		},
 		"contact": {
 			"title": "聯絡",
 			"description": "如有問題，請傳送電子郵件至：[email_link]838394225@qq.com[/email_link]。如果你使用的是第三方 格式魔方 執行個體，請聯絡該執行個體的託管者。"
 		},
-		"last_updated": "最後更新：2025-10-19"
+		"last_updated": "最後更新：2026-07-10"
 	}
 }

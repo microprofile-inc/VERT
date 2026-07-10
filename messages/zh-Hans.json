@@ -272,35 +272,25 @@
 	"privacy": {
 		"title": "隐私政策",
 		"summary": {
-			"title": "摘要",
-			"description": "格式魔方 的隐私政策非常简单：我们根本不收集或存储你的任何数据。我们不使用 cookie 或跟踪器，分析是完全私密的，所有转换（视频除外）都在你的浏览器本地进行。视频在下载后或一小时后删除，除非你明确授权存储；它只会用于故障排查。格式魔方 自托管 Coolify 实例用于托管网站和 vertd（用于视频转换），以及用于完全匿名和聚合分析的 Plausible 实例。<br/><br/>请注意，这可能仅适用于[vert_link]formatcube.com[/vert_link]的官方 格式魔方 实例；第三方实例可能以不同方式处理你的数据。"
+			"title": "概述",
+			"description": "格式魔方的隐私政策非常简单：所有文件转换均通过 WebAssembly 在您的浏览器本地完成，文件不会离开您的设备。本网站托管于阿里云 OSS（对象存储）。我们使用百度统计收集基本的汇总流量统计数据。<br/><br/>注意，此政策仅适用于官方 FormatCube 实例 [vert_link]formatcube.com[/vert_link]；第三方实例可能以不同方式处理您的数据。"
 		},
 		"conversions": {
-			"title": "转换",
-			"description": "大多数转换（图片、文档、音频）完全在你的设备上本地使用相关工具的 WebAssembly 版本（例如 ImageMagick、Pandoc、FFmpeg）进行。这意味着你的文件永远不会离开你的设备，我们也永远无法访问它们。<br/><br/>视频转换在我们的服务器上进行，因为它们需要更多的处理能力，并且目前无法在浏览器上非常快速地完成。你使用 格式魔方 转换的视频在下载后或一小时后删除，除非你明确授权我们将它们存储更长时间，纯粹用于故障排查。"
-		},
-		"conversion_errors": {
-			"title": "转换错误",
-			"description": "当视频转换失败时，我们可能会收集一些匿名数据以帮助我们诊断问题。这些数据可能包括：",
-			"list_job_id": "任务 ID，即匿名化的文件名",
-			"list_format_from": "你转换的来源格式",
-			"list_format_to": "你转换的目标格式",
-			"list_stderr": "你任务的 FFmpeg stderr 输出（错误消息）",
-			"list_video": "实际视频文件（如果明确授权）",
-			"footer": "此信息仅用于诊断转换问题。只有在你明确授权的情况下，才会收集实际视频文件，并且仅用于故障排查。"
+			"title": "文件转换",
+			"description": "所有转换（图像、文档、音频）均使用相应工具的 WebAssembly 版本（如 ImageMagick、Pandoc、FFmpeg）在您的设备上完全本地完成。这意味着您的文件永远不会离开您的设备，我们也无法访问它们。"
 		},
 		"analytics": {
-			"title": "分析",
-			"description": "我们自托管 Plausible 实例用于完全匿名和聚合的分析。Plausible 不使用 cookie，并符合所有主要隐私法规（GDPR/CCPA/PECR）。你可以在[settings_link]设置[/settings_link]的“隐私与数据”部分选择退出分析，并在[plausible_link]这里[/plausible_link]阅读更多关于 Plausible 隐私实践的信息。"
+			"title": "分析统计",
+			"description": "我们使用百度统计收集基本的汇总流量统计数据。您可以在[settings_link]设置[/settings_link]的“隐私和数据”部分选择退出分析统计。"
 		},
 		"local_storage": {
 			"title": "本地存储",
-			"description": "我们使用浏览器的本地存储来保存你的设置，使用浏览器的会话存储来临时存储“关于”部分的 GitHub 贡献者列表，以减少重复的 GitHub API 请求。不会存储或传输任何个人数据。<br/><br/>我们使用的转换工具的 WebAssembly 版本（FFmpeg、ImageMagick、Pandoc）也会在你首次访问网站时本地存储在浏览器中，这样你就不需要每次访问时都重新下载它们。不会存储或传输任何个人数据。你可以随时在[settings_link]设置[/settings_link]的“隐私与数据”部分查看或删除这些数据。"
+			"description": "我们使用您浏览器的本地存储来保存设置。不存储或传输任何个人数据。<br/><br/>我们使用的转换工具的 WebAssembly 版本（FFmpeg、ImageMagick、Pandoc）也会在您首次访问时存储在浏览器本地，因此不需要每次重新下载。不存储或传输任何个人数据。您可以随时在[settings_link]设置[/settings_link]的“隐私和数据”部分查看或删除这些数据。"
 		},
 		"contact": {
 			"title": "联系",
 			"description": "如有问题，请发送电子邮件至：[email_link]838394225@qq.com[/email_link]。如果你使用的是第三方 格式魔方 实例，请联系该实例的托管者。"
 		},
-		"last_updated": "最后更新：2025-10-19"
+		"last_updated": "最后更新：2026-07-10"
 	}
 }

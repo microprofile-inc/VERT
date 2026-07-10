@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { DISCORD_URL } from "$lib/util/consts";
 	import { m } from "$lib/paraglide/messages";
 
 	const year = new Date().getFullYear();
@@ -15,14 +14,6 @@
 		class="w-full h-full flex items-center justify-center text-muted gap-3 relative"
 	>
 		<p>{m["footer.copyright"]({ year })}</p>
-		<p>•</p>
-		<a
-			class="hover:underline font-normal"
-			href={DISCORD_URL}
-			target="_blank"
-		>
-			{m["footer.discord_server"]()}
-		</a>
 		<p>•</p>
 		<a
 			class="hover:underline font-normal"

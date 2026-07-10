@@ -283,41 +283,22 @@
 		}
 	},
 	"privacy": {
-		"title": "Datenschutzerklärung",
 		"summary": {
-			"title": "Zusammenfassung",
-			"description": "Die Datenschutzrichtlinie von FormatCube ist sehr einfach: Wir sammeln oder speichern keinerlei Daten über dich. Wir verwenden keine Cookies oder Tracker, Analysen sind vollständig privat, und alle Konvertierungen (außer Videos) finden lokal in deinem Browser statt. Videos werden nach dem Herunterladen oder nach einer Stunde gelöscht, es sei denn, du gibst uns ausdrücklich die Erlaubnis zur Speicherung; dies wird nur zur Fehlerbehebung verwendet. FormatCube hostet selbst eine Coolify-Instanz für die Website und vertd (für Videokonvertierung) sowie eine Plausible-Instanz für vollständig anonyme und aggregierte Analysen. Wir nutzen Stripe zur Verarbeitung von Spenden, was einige Daten zur Betrugsprävention sammeln kann.<br/><br/>Beachte, dass dies möglicherweise nur für die offizielle VERT-Instanz unter [vert_link]formatcube.com[/vert_link] gilt; Drittanbieter-Instanzen könnten deine Daten anders behandeln."
+			"title": "Summary",
+			"description": "FormatCube's privacy policy is very simple: all file conversions happen locally on your browser using WebAssembly, meaning your files never leave your device. The website is hosted on Alibaba Cloud OSS. We use Baidu Analytics for basic aggregated traffic statistics.<br/><br/>Note this may only apply to the official FormatCube instance at [vert_link]formatcube.com[/vert_link]; third-party instances may handle your data differently."
 		},
 		"conversions": {
-			"title": "Konvertierungen",
-			"description": "Die meisten Konvertierungen (Bilder, Dokumente, Audio) erfolgen vollständig lokal auf deinem Gerät unter Verwendung von WebAssembly-Versionen der entsprechenden Tools (z. B. ImageMagick, Pandoc, FFmpeg). Das bedeutet, dass deine Dateien dein Gerät nie verlassen und wir niemals Zugriff darauf haben.<br/><br/>Videokonvertierungen werden auf unseren Servern durchgeführt, da sie mehr Rechenleistung erfordern und im Browser noch nicht schnell genug durchgeführt werden können. Videos, die du mit FormatCube konvertierst, werden nach dem Herunterladen oder nach einer Stunde gelöscht, es sei denn, du gibst uns ausdrücklich die Erlaubnis, sie länger zu speichern, rein zu Fehlerbehebungszwecken."
-		},
-		"donations": {
-			"title": "Spenden",
-			"description": "Wir verwenden Stripe auf der [about_link]Über[/about_link]-Seite, um Spenden zu sammeln. Stripe kann bestimmte Informationen über die Zahlung und das Gerät zur Betrugsprävention sammeln, wie in [stripe_link]ihrer Dokumentation zur erweiterten Betrugserkennung[/stripe_link] beschrieben. Externe Netzwerkanfragen an Stripe werden verzögert und erst gestellt, wenn du auf den Button zum Bezahlen klickst."
-		},
-		"conversion_errors": {
-			"title": "Konvertierungsfehler",
-			"description": "Wenn eine Videokonvertierung fehlschlägt, sammeln wir möglicherweise einige anonyme Daten, um das Problem zu diagnostizieren. Diese Daten können beinhalten:",
-			"list_job_id": "Die Job-ID, welche der anonymisierte Dateiname ist",
-			"list_format_from": "Das Format, aus dem du konvertiert hast",
-			"list_format_to": "Das Format, in das du konvertiert hast",
-			"list_stderr": "Die FFmpeg stderr-Ausgabe deines Jobs (Fehlermeldung)",
-			"list_video": "Die eigentliche Videodatei (nur bei ausdrücklicher Erlaubnis)",
-			"footer": "Diese Informationen werden ausschließlich zur Diagnose von Konvertierungsproblemen verwendet. Die eigentliche Videodatei wird nur gesammelt, wenn du uns die Erlaubnis dazu gibst, und dann auch nur zur Fehlerbehebung verwendet."
+			"title": "Conversions",
+			"description": "All conversions (images, documents, audio) happen entirely locally on your device using WebAssembly versions of the relevant tools (e.g. ImageMagick, Pandoc, FFmpeg). This means your files never leave your device and we will never have access to them."
 		},
 		"analytics": {
-			"title": "Analysen",
-			"description": "Wir hosten selbst eine Plausible-Instanz für vollständig anonyme und aggregierte Analysen. Plausible verwendet keine Cookies und entspricht allen wichtigen Datenschutzbestimmungen (DSGVO/CCPA/PECR). Du kannst dich im Abschnitt „Datenschutz & Daten“ in den [settings_link]Einstellungen[/settings_link] von den Analysen abmelden und [plausible_link]hier[/plausible_link] mehr über die Datenschutzpraktiken von Plausible lesen."
+			"title": "Analytics",
+			"description": "We use Baidu Analytics for basic aggregated traffic statistics. You can opt out of analytics in the \"Privacy & data\" section in [settings_link]settings[/settings_link]."
 		},
 		"local_storage": {
-			"title": "Lokaler Speicher",
-			"description": "Wir verwenden den lokalen Speicher (Local Storage) deines Browsers, um deine Einstellungen zu speichern, und den Sitzungsspeicher (Session Storage), um die Liste der GitHub-Mitwirkenden für den Bereich „Über“ vorübergehend zu speichern und wiederholte GitHub-API-Anfragen zu reduzieren. Es werden keine persönlichen Daten gespeichert oder übertragen.<br/><br/>Die WebAssembly-Versionen der von uns verwendeten Konvertierungstools (FFmpeg, ImageMagick, Pandoc) werden ebenfalls lokal in deinem Browser gespeichert, wenn du die Website zum ersten Mal besuchst, damit du sie nicht bei jedem Besuch erneut herunterladen musst. Es werden keine persönlichen Daten gespeichert oder übertragen. Du kannst diese Daten jederzeit im Abschnitt „Datenschutz & Daten“ in den [settings_link]Einstellungen[/settings_link] einsehen oder löschen."
+			"title": "Local Storage",
+			"description": "We use your browser's local storage to save your settings. No personal data is stored or transmitted.<br/><br/>The WebAssembly versions of the conversion tools we use (FFmpeg, ImageMagick, Pandoc) are also stored locally on your browser when you first visit the website, so you don't need to redownload them each visit. No personal data is stored or transmitted. You may view or delete this data at any time in the \"Privacy & data\" section in [settings_link]settings[/settings_link]."
 		},
-		"contact": {
-			"title": "Kontakt",
-			"description": "Für Fragen sende uns eine E-Mail an: [email_link]838394225@qq.com[/email_link]. Wenn du eine Drittanbieter-Instanz von FormatCube verwendest, kontaktiere bitte stattdessen den Hoster dieser Instanz."
-		},
-		"last_updated": "Zuletzt aktualisiert: 29.10.2025"
+		"last_updated": "Last updated: 2026-07-10"
 	}
 }

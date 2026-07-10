@@ -283,41 +283,22 @@
 		}
 	},
 	"privacy": {
-		"title": "Politika privatnosti",
 		"summary": {
-			"title": "Sažetak",
-			"description": "VERT-ova politika privatnosti je vrlo jednostavna: ne prikupljamo niti pohranjujemo ikakve podatke o vama. Ne koristimo kolačiće ni trackere, analitika je potpuno privatna, a konverzije (osim videa) rade lokalno. Video se briše nakon preuzimanja ili nakon sat vremena, osim ako nam ne date dozvolu da ga čuvamo radi rješavanja problema. Koristimo Coolify za hosting i Plausible za anonimnu analitiku. Stripe obrađuje donacije i može prikupiti podatke za prevenciju prevara.<br/><br/>Ovo vrijedi za zvaničnu instancu [vert_link]formatcube.com[/vert_link]; treće strane mogu raditi drugačije."
+			"title": "Summary",
+			"description": "FormatCube's privacy policy is very simple: all file conversions happen locally on your browser using WebAssembly, meaning your files never leave your device. The website is hosted on Alibaba Cloud OSS. We use Baidu Analytics for basic aggregated traffic statistics.<br/><br/>Note this may only apply to the official FormatCube instance at [vert_link]formatcube.com[/vert_link]; third-party instances may handle your data differently."
 		},
 		"conversions": {
-			"title": "Konverzije",
-			"description": "Većina konverzija (slike, dokumenti, audio) se obavlja lokalno putem WebAssembly alata (ImageMagick, Pandoc, FFmpeg). Vaše datoteke ne napuštaju uređaj.<br/><br/>Video konverzije se obavljaju na našim serverima jer zahtijevaju više snage. Video se briše nakon preuzimanja ili sat vremena, osim ako nam eksplicitno ne dozvolite duže čuvanje radi otklanjanja grešaka."
-		},
-		"donations": {
-			"title": "Donacije",
-			"description": "Koristimo Stripe na stranici [about_link]o nama[/about_link] za donacije. Stripe može prikupiti određene informacije radi prevencije prevara, opisano u [stripe_link]njihovoj dokumentaciji[/stripe_link]. Eksterni zahtjevi se šalju tek nakon vašeg klika."
-		},
-		"conversion_errors": {
-			"title": "Greške pri konverziji",
-			"description": "Kada konverzija videa ne uspije, možemo prikupiti anonimne informacije radi dijagnostike:",
-			"list_job_id": "ID zadatka (anonimizirano ime datoteke)",
-			"list_format_from": "Format iz kojeg se konvertuje",
-			"list_format_to": "Format u koji se konvertuje",
-			"list_stderr": "FFmpeg stderr (poruka greške)",
-			"list_video": "Stvarni video zapis (samo uz vašu dozvolu)",
-			"footer": "Ove informacije se koriste samo za dijagnostiku. Sam video se prikuplja samo uz vašu dozvolu."
+			"title": "Conversions",
+			"description": "All conversions (images, documents, audio) happen entirely locally on your device using WebAssembly versions of the relevant tools (e.g. ImageMagick, Pandoc, FFmpeg). This means your files never leave your device and we will never have access to them."
 		},
 		"analytics": {
-			"title": "Analitika",
-			"description": "Koristimo vlastitu Plausible instancu za potpuno anonimnu analitiku. Plausible ne koristi kolačiće i usklađen je sa svim glavnim zakonima o privatnosti. Možete isključiti analitiku u sekciji \"Privatnost i podaci\" u [settings_link]postavkama[/settings_link] i pročitati više [plausible_link]ovdje[/plausible_link]."
+			"title": "Analytics",
+			"description": "We use Baidu Analytics for basic aggregated traffic statistics. You can opt out of analytics in the \"Privacy & data\" section in [settings_link]settings[/settings_link]."
 		},
 		"local_storage": {
-			"title": "Lokalno skladištenje",
-			"description": "Vaše postavke se čuvaju u local storage-u preglednika, a lista GitHub doprinosilaca u session storage-u. Nijedan lični podatak se ne skladišti.<br/><br/>WebAssembly alati (FFmpeg, ImageMagick, Pandoc) se također čuvaju lokalno. Možete ih vidjeti ili obrisati u sekciji \"Privatnost i podaci\" u [settings_link]postavkama[/settings_link]."
+			"title": "Local Storage",
+			"description": "We use your browser's local storage to save your settings. No personal data is stored or transmitted.<br/><br/>The WebAssembly versions of the conversion tools we use (FFmpeg, ImageMagick, Pandoc) are also stored locally on your browser when you first visit the website, so you don't need to redownload them each visit. No personal data is stored or transmitted. You may view or delete this data at any time in the \"Privacy & data\" section in [settings_link]settings[/settings_link]."
 		},
-		"contact": {
-			"title": "Kontakt",
-			"description": "Za pitanja, pišite nam na: [email_link]838394225@qq.com[/email_link]. Ako koristite treću stranu, kontaktirajte njihovog hostera."
-		},
-		"last_updated": "Posljednje ažuriranje: 2025-10-29"
+		"last_updated": "Last updated: 2026-07-10"
 	}
 }
