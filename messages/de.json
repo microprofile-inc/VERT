@@ -16,7 +16,7 @@
 	},
 	"upload": {
 		"title": "Der Dateikonverter, den du lieben wirst.",
-		"subtitle": "Die Verarbeitung aller Bild-, Audio- und Dokumentdateien findet direkt auf deinem Gerät statt. Videos werden auf unseren blitzschnellen Servern konvertiert. Kein Dateigrößenlimit, keine Werbung und vollständig Open Source.",
+		"subtitle": "Die Verarbeitung aller Bild-, Audio- und Dokumentdateien findet direkt auf deinem Gerät statt.",
 		"uploader": {
 			"text": "Dateien hier ablegen oder klicken zum {action}",
 			"convert": "Konvertieren"
@@ -220,7 +220,7 @@
 		"title": "Über",
 		"why": {
 			"title": "Warum FormatCube?",
-			"description": "<b>Dateikonverter haben uns schon immer enttäuscht.</b> Sie sind hässlich, voller Werbung und vor allem langsam. Wir haben beschlossen, dieses Problem ein für alle Mal zu lösen, indem wir eine Alternative schaffen, die all diese Probleme und noch mehr behebt.<br/><br/>Alle Nicht-Videodateien werden vollständig auf deinem Gerät konvertiert; das bedeutet, es gibt keine Verzögerung beim Senden und Empfangen der Dateien von einem Server, und wir können niemals die von dir konvertierten Dateien einsehen.<br/><br/>Videodateien werden auf unseren blitzschnellen RTX 4000 Ada Server hochgeladen. Deine Videos bleiben dort für eine Stunde, wenn du sie nicht konvertierst. Wenn du die Datei konvertierst, bleibt das Video für eine Stunde auf dem Server oder bis es heruntergeladen wird. Anschließend wird die Datei von unserem Server gelöscht."
+			"description": "<b>Dateikonverter haben uns immer enttäuscht.</b> Sie sind hässlich, voller Werbung und vor allem; langsam. Wir haben beschlossen, dieses Problem ein für alle Mal zu lösen, indem wir eine Alternative schaffen, die all diese Probleme löst und mehr.<br/><br/>Alle Dateien werden vollständig auf deinem Gerät mit WebAssembly konvertiert; das bedeutet, dass es keine Verzögerung zwischen dem Senden und Empfangen der Dateien gibt und wir niemals deine konvertierten Dateien einsehen."
 		},
 		"sponsors": {
 			"title": "Sponsoren",

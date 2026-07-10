@@ -15,7 +15,7 @@
 	},
 	"upload": {
 		"title": "Konverter berkas andalanmu.",
-		"subtitle": "Semua gambar, audio, dan pemrosesan dokumen dilakukan pada perangkatmu. Video dikonversi pada peladen kilat kami. Tidak ada batas ukuran berkas, tidak ada iklan, dan benar-benar sumber terbuka.",
+		"subtitle": "Semua gambar, audio, dan pemrosesan dokumen dilakukan pada perangkatmu.",
 		"uploader": {
 			"text": "Jatuhkan dan klik untuk {action}",
 			"convert": "Konversi",
@@ -185,7 +185,7 @@
 		"title": "Tentang",
 		"why": {
 			"title": "Mengapa FormatCube?",
-			"description": "<b>Konverter berkas selalu mengecewakan kami.</b> Mereka jelek, penuh iklan, dan yang paling penting; lambat. Kami memutuskan untuk menyelesaikan masalah ini sekali untuk selamanya dengan membuat alternatif yang memperbaiki semua masalah itu, dan lebih banyak lagi.<br/><br/>Semua berkas non-video dikonversi sepenuhnya di perangkat; artinya tidak ada jeda antara pengiriman dan penerimaan berkas, dan kami tidak pernah melihat berkas yang kamu konversi.<br/><br/>File video diunggah ke server RTX 4000 Ada super cepat kami. Videomu akan tetap di sana selama satu jam jika tidak dikonversi. Jika dikonversi, video akan bertahan satu jam atau hingga diunduh. Setelah itu, berkas akan dihapus dari server kami."
+			"description": "<b>Pengonversi berkas selalu mengecewakan kami.</b> Mereka jelek, penuh iklan, dan yang paling penting; lambat. Kami memutuskan untuk menyelesaikan masalah ini sekali untuk selamanya dengan membuat alternatif yang menyelesaikan semua masalah tersebut, dan banyak lagi.<br/><br/>Semua berkas dikonversi sepenuhnya pada perangkat Anda menggunakan WebAssembly; ini berarti tidak ada jeda antara mengirim dan menerima berkas dari server, dan kami tidak akan pernah mengintip berkas yang Anda konversi."
 		},
 		"sponsors": {
 			"title": "Sponsor",

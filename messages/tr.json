@@ -15,7 +15,7 @@
 	},
 	"upload": {
 		"title": "Sevdiğiniz dosya dönüştürücü.",
-		"subtitle": "Tüm görüntü, ses ve belge işlemleri cihazınızda gerçekleştirilir. Videolar, ışık hızındaki sunucularımızda dönüştürülür. Dosya boyutu sınırı ve reklam yoktur. Tamamen açık kaynaklıdır.",
+		"subtitle": "Tüm görüntü, ses ve belge işlemleri cihazınızda gerçekleştirilir.",
 		"uploader": {
 			"text": "{action} için sürükleyip bırakın veya dosya seçin",
 			"convert": "dönüştürmek"
@@ -178,7 +178,7 @@
 		"title": "Hakkımızda",
 		"why": {
 			"title": "Neden FormatCube?",
-			"description": "<b>Dosya dönüştürücüler bizi her zaman hayal kırıklığına uğratmıştır. </b> Çoğu dönüştürücü site, kötü ve reklamlarla dolu arayüze sahiptir ve en önemlisi yavaştır. Tüm bu sorunları ve daha fazlasını çözen bir alternatif oluşturarak bu sorunu sonsuza kadar çözmeye karar verdik. <br/><br/>Video dışındaki tüm dosyalar tamamen cihazınızda dönüştürülür; bu, sunucuya dosya yükleme ve sunucudan dosya indirme sırasında gecikme olmaması ve dönüştürdüğünüz dosyaların asla başka biri tarafından görüntülenememesi anlamına gelir. <br/><br/>Video dosyaları, ışık hızındaki RTX 4000 Ada sunucumuza yüklenir. Videolarınızı dönüştürseniz de dönüştürmeseniz de bir saat sonra sunucularımızdan silinir. Video dönüştürme işlemi gerçekleştirirseniz, bir saat içinde dönüştürülmüş dosyayı indirebilirsiniz. Dosya daha sonra sunucumuzdan silinir."
+			"description": "<b>Dosya dönüştürücüler her zaman bizi hayal kırıklığına uğrattı.</b> Çirkinler, reklamlarla dolular ve en önemlisi; yavaşlar. Bu sorunu çözmek için tüm bu sorunları çözen ve daha fazlasını yapan bir alternatif yaratmaya karar verdik.<br/><br/>Tüm dosyalar cihazınızda WebAssembly kullanılarak tamamen dönüştürülür; bu, bir sunucudan dosya gönderme ve alma arasında gecikme olmadığı ve dönüştürdüğünüz dosyalara asla bakmayacağımız anlamına gelir."
 		},
 		"sponsors": {
 			"title": "Sponsorlar",

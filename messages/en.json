@@ -16,7 +16,7 @@
 	},
 	"upload": {
 		"title": "The file converter you'll love.",
-		"subtitle": "All image, audio, and document processing is done on your device. Videos are converted on our lightning-fast servers. No file size limit, no ads, and completely open source.",
+		"subtitle": "All image, audio, and document processing is done locally on your device.",
 		"uploader": {
 			"text": "Drop or click to {action}",
 			"convert": "convert"
@@ -220,7 +220,7 @@
 		"title": "About",
 		"why": {
 			"title": "Why FormatCube?",
-			"description": "<b>File converters have always disappointed us.</b> They're ugly, riddled with ads, and most importantly; slow. We decided to solve this problem once and for all by making an alternative that solves all those problems, and more.<br/><br/>All non-video files are converted completely on-device; this means that there's no delay between sending and receiving the files from a server, and we never get to snoop on the files you convert.<br/><br/>Video files get uploaded to our lightning-fast RTX 4000 Ada server. Your videos stay on there for an hour if you do not convert them. If you do convert the file, the video will stay on the server for an hour, or until it is downloaded. The file will then be deleted from our server."
+			"description": "<b>File converters have always disappointed us.</b> They're ugly, riddled with ads, and most importantly; slow. We decided to solve this problem once and for all by making an alternative that solves all those problems, and more.<br/><br/>All files are converted completely on-device using WebAssembly; this means that there's no delay between sending and receiving the files from a server, and we never get to snoop on the files you convert."
 		},
 		"sponsors": {
 			"title": "Sponsors",

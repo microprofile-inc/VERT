@@ -15,7 +15,7 @@
 	},
 	"upload": {
 		"title": "Pretvarač datoteka koji ćeš obožavati.",
-		"subtitle": "Cijelokupna obrada slika, zvuka i dokumenata se odvija na vašem uređaju. Videozapisi se pretvaraju na našim izrazito brzim serverima. Nema nikakvih ograničenja veličine niti reklama i potpuno je open source.",
+		"subtitle": "Cijelokupna obrada slika, zvuka i dokumenata se odvija na vašem uređaju.",
 		"uploader": {
 			"text": "Ubaci ili klikni da {action}",
 			"convert": "pretvori"
@@ -158,7 +158,7 @@
 		"title": "O stranici",
 		"why": {
 			"title": "Zašto baš FormatCube?",
-			"description": "<b>Pretvarači datoteka su nas uvijek razočarali.</b> Izuzetno su ružni, prepuni reklama, i najvažnije; spori! Odlučili smo riješiti problem jednom i zauvijek praveći alternativu koja riješava sve ove probleme, i više.<br/><br/>Sve datoteke koji nisu videozapisi su pretvoreni direktno na Vašem uređaju; To znači da nema nikakve stanke između slanja i primanja datoteka sa servera, i nikada ne dobijemo šansu gurati nos u vaše datoteke koje pretvarate. <br/><br/>Videozapisi se prenose na naše izuzetno brze RTX 4000 Ada servere. Vaši videozapisi tamo ostano sat vremena ako ih ne pretvorite. Ako ih i pretvorite, videozapis će ostati na serveru na sat vremena, ili dok se ne preuzme. Datoteka će zatim biti obrisana sa našeg servera."
+			"description": "<b>Pretvarači datoteka su nas uvijek razočarali.</b> Ružni su, puni reklama i što je najvažnije; spori. Odlučili smo riješiti ovaj problem jednom zauvijek stvaranjem alternative koja rješava sve te probleme i više.<br/><br/>Sve datoteke se pretvaraju u potpunosti na vašem uređaju koristeći WebAssembly; to znači da nema kašnjenja između slanja i primanja datoteka sa servera, i nikada nećemo prisustvovati datotekama koje pretvarate."
 		},
 		"sponsors": {
 			"title": "Sponzori",

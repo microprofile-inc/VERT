@@ -15,7 +15,7 @@
 	},
 	"upload": {
 		"title": "Il convertitore di file che amerai.",
-		"subtitle": "Tutta l'elaborazione di immagini, audio e documenti avviene sul tuo dispositivo. I video sono convertiti sui nostri server velocissimi. Nessun limite di dimensione, nessuna pubblicità e completamente open source.",
+		"subtitle": "Tutta l'elaborazione di immagini, audio e documenti avviene sul tuo dispositivo.",
 		"uploader": {
 			"text": "Trascina o clicca per {action}",
 			"convert": "convertire"
@@ -184,7 +184,7 @@
 		"title": "Informazioni",
 		"why": {
 			"title": "Perché FormatCube?",
-			"description": "<b>I convertitori di file ci hanno sempre deluso.</b> Sono brutti, pieni di pubblicità e, soprattutto, lenti. Abbiamo deciso di risolvere questo problema una volta per tutte creando un'alternativa che risolve tutti questi problemi e non solo.<br/><br/>Tutti i file non video vengono convertiti completamente sul dispositivo; questo significa che non ci sono ritardi tra l'invio e la ricezione dei file da un server e non possiamo mai spiare i file che converti.<br/><br/>I file video vengono caricati sul nostro velocissimo server RTX 4000 Ada. I tuoi video rimangono lì per un'ora se non li converti. Se converti il file, il video rimarrà sul server per un'ora o fino a quando non viene scaricato. Il file verrà quindi eliminato dal nostro server."
+			"description": "<b>I convertitori di file ci hanno sempre deluso.</b> Sono brutti, pieni di pubblicità e, soprattutto; lenti. Abbiamo deciso di risolvere questo problema una volta per tutte creando un'alternativa che risolva tutti questi problemi e altro ancora.<br/><br/>Tutti i file vengono convertiti completamente sul tuo dispositivo utilizzando WebAssembly; ciò significa che non c'è ritardo tra l'invio e la ricezione dei file da un server e non spieremo mai i file che converti."
 		},
 		"sponsors": {
 			"title": "Sponsor",
