@@ -114,8 +114,7 @@ mkdir -p "$CERT_BACKUP_DIR"
 $ACME_SH --install-cert -d "$DOMAIN" --ecc \
 	--fullchain-file "$CERT_BACKUP_DIR/fullchain.cer" \
 	--key-file       "$CERT_BACKUP_DIR/private.key" \
-	--cert-file      "$CERT_BACKUP_DIR/cert.cer" \
-	--ca-cert-file   "$CERT_BACKUP_DIR/ca.cer" 2>&1
+	--cert-file      "$CERT_BACKUP_DIR/cert.cer" 2>&1
 
 echo "  ✓ 证书文件:"
 for f in "$CERT_BACKUP_DIR"/*; do
@@ -152,12 +151,55 @@ ossutil cp "$CERT_BACKUP_DIR/cert.cer" "oss://${BUCKET}/ssl/cert.cer" \
 	--meta "Content-Type:application/x-pem-file;Cache-Control:no-cache" \
 	--force >/dev/null 2>&1 && echo "  ✓ ssl/cert.cer" || echo "  ✗ cert 上传失败"
 
-# 上传 ca chain
-ossutil cp "$CERT_BACKUP_DIR/ca.cer" "oss://${BUCKET}/ssl/ca.cer" \
-	--endpoint "$ENDPOINT" \
-	--meta "Content-Type:application/x-pem-file;Cache-Control:no-cache" \
-	--force >/dev/null 2>&1 && echo "  ✓ ssl/ca.cer" || echo "  ✗ ca 上传失败"
+fi
 
+# 5b. 上传证书到阿里云 SSL 证书管理服务
+echo ""
+echo "[5b/6] 上传证书到阿里云 SSL 证书管理服务..."
+if [ $CERT_CHANGED -eq 0 ]; then
+	echo "  ⊘ 证书未变更，跳过"
+else
+	# 5b. 上传到阿里云 SSL 证书服务
+	echo ""
+	echo "[5b/6] 上传证书到阿里云 SSL 证书服务..."
+	CERT_CONTENT=$(cat "$CERT_BACKUP_DIR/fullchain.cer")
+	KEY_CONTENT=$(cat "$CERT_BACKUP_DIR/private.key")
+	UPLOAD_RESULT=$(aliyun --region cn-hongzhou --endpoint cas.aliyuncs.com \
+		cas UploadUserCertificate \
+		--Name "${DOMAIN}-letsencrypt" \
+		--Cert "$CERT_CONTENT" \
+		--Key "$KEY_CONTENT" 2>&1)
+	CERT_ID=$(echo "$UPLOAD_RESULT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('CertId',''))" 2>/dev/null || echo "")
+	if [ -n "$CERT_ID" ]; then
+		echo "  ✓ 证书已上传 (ID: $CERT_ID)"
+	else
+		echo "  ⚠️ 上传结果: $UPLOAD_RESULT"
+		# 尝试从已有证书列表查找
+		CERT_ID=$(aliyun --region cn-hongzhou --endpoint cas.aliyuncs.com \
+			cas ListUserCertificateOrder --ShowSize 50 2>&1 | \
+			python3 -c "import sys,json; certs=json.load(sys.stdin).get('CertificateOrderList',[]); print(next((c.get('InstanceId','') for c in certs if '$DOMAIN' in c.get('Domain','')), ''))" 2>/dev/null || echo "")
+	fi
+
+	# 5c. 绑定证书到 OSS 自定义域名
+	if [ -n "$CERT_ID" ]; then
+		echo ""
+		echo "[5c/6] 绑定证书到 OSS 自定义域名..."
+		CERT_XML="/tmp/cname-cert.xml"
+		cat > "$CERT_XML" << XMLEOF
+<?xml version="1.0" encoding="utf-8"?>
+<BucketCnameConfiguration>
+  <Cname>
+    <Domain>${DOMAIN}</Domain>
+    <CertificateConfiguration>
+      <CertId>${CERT_ID}</CertId>
+    </CertificateConfiguration>
+  </Cname>
+</BucketCnameConfiguration>
+XMLEOF
+		ossutil bucket-cname --method put --item certificate \
+			"oss://${BUCKET}" "$CERT_XML" \
+			--endpoint "$ENDPOINT" 2>&1 && echo "  ✓ 证书已绑定到 ${DOMAIN}" || echo "  ✗ 绑定失败"
+	fi
 fi
 
 # 6. 完成提示
@@ -166,14 +208,14 @@ echo "[6/6] 完成!"
 echo "=========================================="
 echo "  证书文件: $CERT_BACKUP_DIR/"
 echo "  OSS 备份: oss://${BUCKET}/ssl/"
+echo "  SSL 证书服务: ${DOMAIN}-letsencrypt"
 echo "=========================================="
 echo ""
 echo "📋 绑定到阿里云 CDN / 自定义域名:"
 echo "  1. 登录阿里云控制台 → CDN → 域名管理"
-echo "  2. 选择 formatcube.com → HTTPS 配置"
-echo "  3. 上传证书:"
-echo "     - 公钥: $CERT_BACKUP_DIR/fullchain.cer"
-echo "     - 私钥: $CERT_BACKUP_DIR/private.key"
+echo "  2. 选择 formatcube.com → HTTPS 配置 → 选择证书"
+echo "  3. 在下拉列表中选择「formatcube.com-letsencrypt」"
+echo "  （证书已自动上传到阿里云 SSL 证书管理服务）"
 echo ""
 echo "🔄 自动续签 (crontab):"
 echo "  $ACME_SH --renew -d $DOMAIN --ecc --dns dns_ali --force"
