@@ -74,6 +74,10 @@ export class Settings {
 
 			settings.vertdBlockedHashes = vertdBlockedHashes;
 
+			if (settings.filenameFormat?.startsWith("FormatCube_")) {
+				settings.filenameFormat = this.settings.filenameFormat;
+			}
+
 			this.settings = {
 				...this.settings,
 				...settings,
