@@ -6,6 +6,7 @@ import { error, log } from "$lib/util/logger";
 import { m } from "$lib/paraglide/messages";
 import { Settings } from "$lib/sections/settings/index.svelte";
 import { ToastManager } from "$lib/util/toast.svelte";
+import { fetchWithProgress } from "$lib/util/fetchProgress";
 
 // TODO: differentiate in UI? (not native formats)
 const videoFormats = [
@@ -88,12 +89,19 @@ export class FFmpegConverter extends Converter {
 
 				this.status = "downloading";
 
+				const wasmBuffer = await fetchWithProgress(
+					`${baseURL}/ffmpeg-core.wasm`,
+					(_, __, p) => { this.downloadProgress = p; },
+				);
+				const wasmBlobUrl = URL.createObjectURL(new Blob([wasmBuffer]));
+
 				await this.ffmpeg.load({
 					coreURL: `${baseURL}/ffmpeg-core.js`,
-					wasmURL: `${baseURL}/ffmpeg-core.wasm`,
+					wasmURL: wasmBlobUrl,
 				});
 
 				this.status = "ready";
+				this.downloadProgress = 100;
 			})();
 		} catch (err) {
 			error(["converters", this.name], `Error loading ffmpeg: ${err}`);

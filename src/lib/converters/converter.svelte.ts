@@ -36,6 +36,7 @@ export class Converter {
 	public supportedFormats: FormatInfo[] = [];
 
 	public status: WorkerStatus = $state("not-ready");
+	public downloadProgress: number = $state(-1);
 	public readonly reportsProgress: boolean = false;
 
 	private timeoutId?: NodeJS.Timeout;

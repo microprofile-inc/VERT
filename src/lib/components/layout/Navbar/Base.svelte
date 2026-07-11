@@ -209,12 +209,13 @@
 			></div>
 		{/if}
 		<a
-			class="w-28 h-full bg-accent rounded-xl items-center justify-center hidden md:flex"
+			class="h-full items-center justify-center gap-2 hidden md:flex pl-2 pr-3"
 			href="/"
 		>
-			<div class="h-5 w-full">
+			<div class="h-7 w-7 flex-shrink-0">
 				<Logo />
 			</div>
+			<span class="font-display font-bold text-sm whitespace-nowrap">格式魔方</span>
 		</a>
 		{#each items as item, i (item.url)}
 			{@render link(item, i)}

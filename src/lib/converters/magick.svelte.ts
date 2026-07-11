@@ -8,6 +8,7 @@ import { imageFormats } from "./magick-automated";
 import { Settings } from "$lib/sections/settings/index.svelte";
 import magickWasm from "@imagemagick/magick-wasm/magick.wasm?url";
 import { ToastManager } from "$lib/util/toast.svelte";
+import { fetchWithProgress } from "$lib/util/fetchProgress";
 
 export class MagickConverter extends Converter {
 	public name = "imagemagick";
@@ -89,15 +90,11 @@ export class MagickConverter extends Converter {
 	private async initializeWasm() {
 		try {
 			this.status = "downloading";
-			const response = await fetch(magickWasm);
-			if (!response.ok) {
-				throw new Error(
-					`Failed to fetch WASM: ${response.status} ${response.statusText}`,
-				);
-			}
-
-			this.wasm = await response.arrayBuffer();
+			this.wasm = await fetchWithProgress(magickWasm, (_, __, p) => {
+				this.downloadProgress = p;
+			});
 			this.status = "ready";
+			this.downloadProgress = 100;
 		} catch (err) {
 			this.status = "error";
 			error(

@@ -6,7 +6,7 @@
 	import { DISABLE_ALL_EXTERNAL_REQUESTS, VERT_NAME } from "$lib/util/consts.js";
 	import * as Layout from "$lib/components/layout";
 	import * as Navbar from "$lib/components/layout/Navbar";
-	import featuredImage from "$lib/assets/VERT_Feature.webp";
+	import featuredImage from "$lib/assets/FormatCube_Feature.webp";
 	import { Settings } from "$lib/sections/settings/index.svelte";
 	import {
 		files,

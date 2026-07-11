@@ -112,7 +112,7 @@
 <style lang="postcss">
 	.tooltip {
 		--border-size: 1px;
-		@apply fixed bg-panel-alt text-foreground border border-stone-400 dynadark:border-white drop-shadow-lg text-xs rounded-full pointer-events-none z-[999] max-w-xs break-words whitespace-normal;
+		@apply fixed bg-panel-alt text-foreground border border-stone-400 dynadark:border-white drop-shadow-lg text-sm rounded-full pointer-events-none z-[999] max-w-xs break-words whitespace-normal;
 		@apply px-5 py-2.5;
 	}
 
