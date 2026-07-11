@@ -42,6 +42,13 @@
 			>
 				{m["footer.privacy_policy"]()}
 			</a>
+			<p>•</p>
+			<a
+				class="hover:underline font-normal"
+				href="/sitemap.xml"
+			>
+				Sitemap
+			</a>
 		</div>
 
 		<div class="w-48"></div>

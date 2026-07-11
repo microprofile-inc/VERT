@@ -233,5 +233,25 @@
 			"description": "We use your browser's local storage to save your settings. No personal data is stored or transmitted.<br/><br/>The WebAssembly versions of the conversion tools we use (FFmpeg, ImageMagick, Pandoc) are also stored locally on your browser when you first visit the website, so you don't need to redownload them each visit. No personal data is stored or transmitted. You may view or delete this data at any time in the \"Privacy & data\" section in [settings_link]settings[/settings_link]."
 		},
 		"last_updated": "Last updated: 2026-07-10"
+	},
+	"seo": {
+		"how_to_title": "How to convert {from} to {to}",
+		"step1_title": "1. Upload",
+		"step1_desc": "Drag & drop or click to select your {from} file",
+		"step2_title": "2. Convert",
+		"step2_desc": "Our converter automatically processes your file to {to}",
+		"step3_title": "3. Download",
+		"step3_desc": "Download your converted {to} file instantly",
+		"why_title": "Why use our {from} to {to} converter",
+		"free_title": "100% Free",
+		"free_desc": "No hidden costs, no registration required",
+		"local_title": "Local Processing",
+		"local_desc": "All conversion happens on your device — your files never leave your browser",
+		"nolimit_title": "No File Size Limit",
+		"nolimit_desc": "Convert files of any size without restrictions",
+		"privacy_title": "Privacy First",
+		"privacy_desc": "No ads, no tracking — your privacy is respected",
+		"ready_text": "Ready to convert? Drop your {from} file above to start converting to {to} for free.",
+		"drop_hint": "Drop your {from} file here to convert to {to} instantly"
 	}
 }

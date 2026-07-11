@@ -13,6 +13,7 @@
 		showGradient,
 		vertdLoaded,
 		dropdownStates,
+		preferredOutputFormat,
 	} from "$lib/store/index.svelte";
 	import { VertFile } from "$lib/types";
 	import {
@@ -83,6 +84,19 @@
 					categories[category]?.formats.includes(defaultFormat)
 				) {
 					targetFormat = defaultFormat;
+				}
+			}
+
+			// or use preferred format from SEO page
+			if (!targetFormat) {
+				const pref = $preferredOutputFormat;
+				if (
+					pref &&
+					pref !== file.from &&
+					categories[category]?.formats.includes(pref)
+				) {
+					targetFormat = pref;
+					preferredOutputFormat.set(null);
 				}
 			}
 

@@ -433,6 +433,7 @@ export const goingLeft = writable(false);
 export const dropping = writable(false);
 export const vertdLoaded = writable(false);
 export const dropdownStates = writable<Record<string, string>>({});
+export const preferredOutputFormat = writable<string | null>(null);
 
 export const isMobile = writable(false);
 export const effects = writable(true);

@@ -292,5 +292,25 @@
 			"description": "如有問題，請傳送電子郵件至：[email_link]838394225@qq.com[/email_link]。如果你使用的是第三方 格式魔方 執行個體，請聯絡該執行個體的託管者。"
 		},
 		"last_updated": "最後更新：2026-07-10"
+	},
+	"seo": {
+		"how_to_title": "如何將{from}轉換為{to}",
+		"step1_title": "1. 上傳",
+		"step1_desc": "拖放或點擊選擇您的{from}檔案",
+		"step2_title": "2. 轉換",
+		"step2_desc": "格式魔方自動將檔案轉換為{to}格式",
+		"step3_title": "3. 下載",
+		"step3_desc": "下載轉換後的{to}檔案",
+		"why_title": "為什麼選擇我們的{from}轉{to}工具",
+		"free_title": "免費使用",
+		"free_desc": "無需註冊，完全免費",
+		"local_title": "本地處理",
+		"local_desc": "所有轉換在您的裝置上完成，檔案不會離開瀏覽器",
+		"nolimit_title": "無大小限制",
+		"nolimit_desc": "轉換任意大小的檔案，無限制",
+		"privacy_title": "隱私優先",
+		"privacy_desc": "無廣告、無追蹤，尊重您的隱私",
+		"ready_text": "準備轉換？拖放{from}檔案到上方開始免費轉換為{to}。",
+		"drop_hint": "將{from}檔案拖放到此處即可轉換為{to}"
 	}
 }
